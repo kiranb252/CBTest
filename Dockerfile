@@ -27,8 +27,4 @@ ADD resolve-deps.sh /builder/resolve-deps.sh
 
 RUN ["chmod", "+x", "/builder/resolve-deps.sh"]
 
-ADD sonarqube-scanner-maven /usr/testprojname
-
-RUN cd /usr/testprojname \
-	&& mvn sonar:sonar
 ENTRYPOINT ["mvn"]
